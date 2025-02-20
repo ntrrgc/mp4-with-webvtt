@@ -23,18 +23,18 @@ cd tmp
 "$DIR/generate_vtt.py" > simple.vtt
 
 # Non-fragmented, video and text
-cp ../counting.mp4 counting_vttsimple.mp4
-MP4Box -add simple.vtt counting_vttsimple.mp4
-cp counting_vttsimple.mp4 "$DIR/out/non-frag-counting_vttsimple.mp4"
+cp ../counting.mp4 counting-vttsimple.mp4
+MP4Box -add simple.vtt counting-vttsimple.mp4
+cp counting-vttsimple.mp4 "$DIR/out/non-frag-counting-vttsimple.mp4"
 
 # Fragmented, video and text
-MP4Box -dash 5000 'counting_vttsimple.mp4'
-dash_to_mp4_with_manifest counting_vttsimple counting_video_vttsimple
+MP4Box -dash 5000 'counting-vttsimple.mp4'
+dash_to_mp4_with_manifest counting-vttsimple counting-video-vttsimple
 
 # Fragmented, only video
-MP4Box -dash 5000 'counting_vttsimple.mp4#trackID=1'
-dash_to_mp4_with_manifest counting_vttsimple counting_video
+MP4Box -dash 5000 'counting-vttsimple.mp4#trackID=1'
+dash_to_mp4_with_manifest counting-vttsimple counting-video
 
 # Fragmented, only text
-MP4Box -dash 5000 'counting_vttsimple.mp4#trackID=4'
-dash_to_mp4_with_manifest counting_vttsimple counting_vttsimple
+MP4Box -dash 5000 'counting-vttsimple.mp4#trackID=4'
+dash_to_mp4_with_manifest counting-vttsimple counting-vttsimple
