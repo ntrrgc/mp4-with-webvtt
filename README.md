@@ -12,6 +12,8 @@ gst-launch-1.0 filesrc location=counting_mpeg4video.mp4 ! qtdemux ! decodebin ! 
 
 `counting_h264.mp4` is used as base for the generated test vectors.
 
+A sound track has also been added.
+
 # How to use
 
 Run:
